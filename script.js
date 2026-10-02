@@ -1,4 +1,3 @@
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -14,7 +13,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 
-// Portfolio filter buttons
 const filters = document.querySelectorAll('.project-filter span');
 
 filters.forEach(filter => {
