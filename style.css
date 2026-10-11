@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,19 +11,18 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
+    background: #f2f2f2;
     color: #111;
 }
 
-
 header {
     width: 100%;
-    height: 75px;
+    min-height: 75px;
     background: #080e20;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 15px 10%;
 }
 
 .logo {
@@ -34,7 +34,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 35px;
 }
 
 nav a {
@@ -55,15 +55,12 @@ nav a:hover {
     font-weight: bold;
 }
 
-
 .home {
     width: 100%;
     min-height: 650px;
     display: flex;
     overflow: hidden;
 }
-
-/* LEFT SIDE */
 
 .home-left {
     width: 55%;
@@ -92,8 +89,6 @@ nav a:hover {
     color: #555b68;
 }
 
-/* SOCIAL ICONS */
-
 .socials {
     display: flex;
     gap: 18px;
@@ -113,7 +108,6 @@ nav a:hover {
     font-size: 18px;
 }
 
-
 .home-right {
     width: 45%;
     background: #080e20;
@@ -129,6 +123,7 @@ nav a:hover {
     object-fit: contain;
     object-position: bottom;
 }
+
 
 .intro-box {
     width: 100%;
@@ -152,145 +147,77 @@ nav a:hover {
 }
 
 
-.about,
-.skills,
-.projects,
-.contact {
-    min-height: 300px;
-    padding: 70px 20px;
+.about {
+    min-height: auto;
+    background: #f2f2f2;
+    padding: 65px 20px 35px;
     text-align: center;
 }
 
 .about h2,
-.skills h2,
-.projects h2,
-.contact h2 {
-    display: inline-block;
-    border: 4px solid #111a38;
-    padding: 15px 55px;
-    letter-spacing: 7px;
-}
-
-
-@media (max-width: 768px) {
-
-    header {
-        padding: 0 5%;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-    .home {
-        flex-direction: column;
-    }
-
-    .home-left,
-    .home-right {
-        width: 100%;
-    }
-
-    .home-left {
-        min-height: 500px;
-    }
-
-    .home-right {
-        min-height: 500px;
-    }
-
-    .intro h1 {
-        font-size: 34px;
-    }
-}
-
-.about {
-    min-height: 850px;
-    background: #f2f2f2;
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.about h2 {
-    display: inline-block;
-    border: 4px solid #111a38;
-    padding: 15px 55px;
-    letter-spacing: 7px;
-    font-size: 22px;
-    margin-bottom: 70px;
-}
-
-.about-text {
-    max-width: 620px;
-    margin: 0 auto;
-}
-
-.about-text p {
-    font-size: 20px;
-    line-height: 1.45;
-    margin-bottom: 35px;
-    color: #111;
-}
-
-.about-divider {
-    margin-top: 55px;
-    font-size: 18px;
-    color: #111a38;
-    letter-spacing: 3px;
-}
-
-.skills {
-    min-height: 1000px;
-    background: #f2f2f2;
-    padding: 60px 8%;
-    text-align: center;
-}
-
-.skills-divider {
-    margin-bottom: 65px;
-    color: #111a38;
-    letter-spacing: 4px;
-}
-
-.skill-categories {
-    max-width: 1100px;
-    margin: 0 auto 80px;
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.skill-category {
-    width: 30%;
-}
-
-.skill-category h3 {
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-.skill-category p {
-    font-size: 12px;
-    line-height: 1.5;
-}
-
 .skills > h2 {
     display: inline-block;
     border: 4px solid #111a38;
     padding: 15px 55px;
     letter-spacing: 7px;
     font-size: 22px;
+    margin-bottom: 55px;
+}
+
+.about-text {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+
+.skills {
+    min-height: auto;
+    background: #f2f2f2;
+    padding: 40px 8% 100px;
+    text-align: center;
+}
+
+.skill-categories {
+    max-width: 1100px;
+    margin: 0 auto 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.skill-category h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.skill-category p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.skills > h2 {
     margin-bottom: 70px;
 }
 
+
 .technologies {
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .technologies > h3 {
@@ -351,23 +278,6 @@ nav a:hover {
     font-size: 25px;
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .skill-categories {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-category {
-        width: 90%;
-    }
-
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 .projects {
     background: #080e20;
@@ -376,7 +286,6 @@ nav a:hover {
     text-align: center;
     color: white;
 }
-
 
 .portfolio-banner {
     min-height: 190px;
@@ -394,7 +303,6 @@ nav a:hover {
     letter-spacing: 8px;
 }
 
-
 .project-filter {
     display: flex;
     justify-content: center;
@@ -404,9 +312,14 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-.project-filter span:first-child {
+.project-filter span {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.project-filter span:first-child,
+.project-filter span.active {
     border-bottom: 2px solid white;
-    padding: 0 35px 10px;
 }
 
 .projects-grid {
@@ -441,80 +354,36 @@ nav a:hover {
     height: auto;
 }
 
-
 .more-projects {
     margin-top: 80px;
     font-size: 18px;
     font-weight: bold;
 }
 
-.portfolio-divider {
-    margin: 30px 0;
-    letter-spacing: 5px;
-}
-
 
 .portfolio-socials {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 100px;
     margin-top: 25px;
 }
 
-.portfolio-socials > div {
-    min-width: 150px;
-}
-
-.social-big {
-    display: block;
-    font-size: 45px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.portfolio-socials p {
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-
-@media (max-width: 768px) {
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin: 60px auto;
-    }
-
-    .project-filter {
-        gap: 30px;
-    }
-
-    .doclock-project {
-        margin-top: 60px;
-    }
-
-    .portfolio-socials {
-        gap: 30px;
-    }
-}
-
-
-.project-filter span {
-    cursor: pointer;
-    padding-bottom: 10px;
-}
-
-.project-filter span.active {
-    border-bottom: 2px solid white;
-}
 .social-account {
     text-decoration: none;
     color: white;
     text-align: center;
 }
 
+.social-big {
+    display: block;
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
 .social-account p {
+    font-size: 12px;
+    letter-spacing: 1px;
     margin-top: 10px;
 }
 
@@ -526,4 +395,126 @@ nav a:hover {
 .skills-divider,
 .portfolio-divider {
     display: none !important;
+}
+
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .skill-categories {
+        gap: 25px;
+    }
+
+    .tech-grid {
+        gap: 35px 25px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-left,
+    .home-right {
+        width: 100%;
+    }
+
+    .home-left {
+        min-height: 470px;
+    }
+
+    .home-right {
+        min-height: 400px;
+    }
+
+    .intro {
+        width: 85%;
+    }
+
+    .intro h1 {
+        font-size: 34px;
+    }
+
+    .socials {
+        margin-top: 45px;
+    }
+
+    .about {
+        padding: 55px 20px 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .skills {
+        padding: 35px 8% 75px;
+    }
+
+    .skill-categories {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 65px;
+    }
+
+    .skill-category {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin: 60px auto;
+    }
+
+    .project-filter {
+        gap: 25px;
+    }
+
+    .doclock-project {
+        margin-top: 60px;
+    }
+
+    .portfolio-socials {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .about h2,
+    .skills > h2 {
+        padding: 12px 25px;
+        letter-spacing: 4px;
+    }
 }
