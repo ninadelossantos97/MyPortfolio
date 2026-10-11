@@ -521,3 +521,9 @@ nav a:hover {
 .social-account:hover {
     opacity: 0.7;
 }
+
+.about-divider,
+.skills-divider,
+.portfolio-divider {
+    display: none !important;
+}
